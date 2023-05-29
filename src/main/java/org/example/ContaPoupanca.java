@@ -1,18 +1,10 @@
 package org.example;
 
-public class ContaPoupanca {
+public class ContaPoupanca extends Conta {
 
-    public int agencia;
-    public int numPoup;
-    public double saldo;
-
-    public void sacar(){
-
-    }
-    public void depositar(){
-
-    }
-    public void transferir(){
-
-    }
+    private static int SEQUENCIAL = 100;
+    public ContaPoupanca() {
+            super.agencia = Conta.AGENCIA_PADRAO;
+            super.numConta = SEQUENCIAL++;
+        }
 }

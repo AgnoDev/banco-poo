@@ -1,19 +1,10 @@
 package org.example;
 
-public class ContaCorrente {
+public class ContaCorrente extends Conta {
+    private static int SEQUENCIAL = 1;
 
-    public int agencia;
-    public int numConta;
-    public double saldo;
-
-    public void sacar(){
-
+    public ContaCorrente() {
+        super.agencia = Conta.AGENCIA_PADRAO;
+        super.numConta = SEQUENCIAL++;
     }
-    public void depositar(){
-
-    }
-    public void transferir(){
-
-    }
-
 }
