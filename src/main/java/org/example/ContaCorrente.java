@@ -1,10 +1,16 @@
 package org.example;
 
 public class ContaCorrente extends Conta {
-    private static int SEQUENCIAL = 1;
 
-    public ContaCorrente() {
-        super.agencia = Conta.AGENCIA_PADRAO;
-        super.numConta = SEQUENCIAL++;
+
+    public ContaCorrente(Cliente cliente) {
+        super(cliente);
+    }
+
+    @Override
+    public void imprimirExtrato() {
+        System.out.println("$$$$$ Saldo Conta Corrente $$$$$");
+        super.consultarSaldo();
+
     }
 }

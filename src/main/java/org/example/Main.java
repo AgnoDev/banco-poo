@@ -4,16 +4,20 @@ package org.example;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        Cliente cliente1 = new Cliente();
+        cliente1.setNome("Agno");
+        Cliente cliente2 = new Cliente();
+        cliente2.setNome("Lara");
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        Conta cc = new ContaCorrente(cliente1);
+        Conta cp = new ContaPoupanca(cliente2);
+
+        cc.imprimirExtrato();
+        cc.depositar(50);
+        cc.sacar(20);
+        cc.transferir(30, cp);
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+        cp.imprimirExtrato();
         }
-    }
 }
