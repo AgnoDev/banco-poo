@@ -1,5 +1,8 @@
 package org.example;
 
+import lombok.Data;
+
+@Data
 public abstract class Conta implements IConta {
     protected int agencia;
     protected int numConta;
@@ -42,20 +45,4 @@ public abstract class Conta implements IConta {
         System.out.println(String.format("Conta.: %d", this.numConta));
         System.out.println(String.format("Saldo: %.2f", this.saldo));
     }
-
-
-    // com Lombok (@Data)
-    public int getAgencia() {
-        return agencia;
-    }
-
-    public int getNumConta() {
-        return numConta;
-    }
-
-    public double getSaldo() {
-        return saldo;
-    }
-
-
 }
